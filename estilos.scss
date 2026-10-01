@@ -1,0 +1,96 @@
+
+//PREGUNTA 1
+//VARIABLES DE ALERTA
+$alertas: info, success, warning, danger;
+//VARIABLES DE COLOR BASE
+$color-base: red;
+
+//ANIMACION PARA BORDE DE DANGER
+@keyframes borde-animado {
+    0%{
+        border: 2px solid black;
+    }50%{
+        border: 2px solid transparent;
+    }100%{
+        border: 2px solid black;
+    }
+}
+
+//EACH PARA RECORRER LA VARIABLE ALERTAS Y GENERAR LAS 4 ALERTAR
+@each $alerta in $alertas{
+    .alert-#{$alerta}{
+
+        //EXTRA PARA DARLE FORMA DE CAJA
+        padding: 15px;
+        height: 30px;
+        width: 150px;
+        border-radius: 17px;
+        text-align: center;
+        align-content: center;
+
+        //CONDICIONAL PARA COMPARAR ALERTAS Y DARLES RESPECTIVO COLOR
+        @if $alerta == info {
+            background-color: lighten($color-base, 40%);
+        }@else if $alerta == success {
+            background-color: lighten($color-base, 30%);
+        }@else if $alerta == warning {
+            background-color: lighten($color-base, 20%);
+        }@else if $alerta == danger {
+            background-color: lighten($color-base, 10%);
+            //LLAMAMOS A LA ANIMACION 
+            animation: borde-animado 1s infinite;
+        }
+    }
+}
+
+//PREGUNTA 2
+//VARIABLE BASE DE TAMAÑO DE LETRA 
+$tamanio-base: 14px;
+
+//FOR PARA GENERAR LAS 3 TARJETAS
+@for $i from 1 through 4{
+    .card-#{$i}{
+        //INCREMENTO DE LA LETRA Y PROFUNDIDAD DE SOMBRA PROPORCIONAL AL INDICE
+        font-size: $tamanio-base * $i;
+        box-shadow: 0 (2px*$i) (4px*$i) grey ;
+
+        // EXTRA PARA DARLE ESTILO
+        padding: 15px;
+        height: 80px;
+        width: 600px;
+        border-radius: 17px;
+        text-align: center;
+        align-content: center;
+    }
+}
+
+//PREGUNTA 3
+//VARIABLE PARA EL FONDO
+$fondo-base: green;
+
+//FUNCION PARA DETERMINAR LUMINOSIDAD
+@function color-texto($color-fondo){
+    //CONDICIONAL PARA DETERMINAR SI LA LETRA ES BLANCA O NEGRA
+    @if lightness($color-fondo)>50%{
+        @return black;
+    }@else{
+        @return white; 
+    }
+}
+
+//FOR PARA CREAR LAS TARJETAS
+@for $i from 1 through 4{
+    .tarjeta-#{$i}{
+        //UTILIZAMOS LIGHTEN PARA AUMENTAR EL COLOR DEL FONDO BASE PROPORCIONAL AL INDICE Y PODER PROBAR LA FUNCION
+        background-color: lighten($fondo-base, (10% *  $i)); 
+        color: color-texto(lighten($fondo-base, (10% *  $i)));
+
+        //EXTRA PARA DARLE FORMA DE CAJA
+        padding: 15px;
+        height: 30px;
+        width: 150px;
+        border-radius: 17px;
+        text-align: center;
+        align-content: center;
+    }
+}

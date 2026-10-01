@@ -1,0 +1,139 @@
+@keyframes borde-animado {
+  0% {
+    border: 2px solid black;
+  }
+  50% {
+    border: 2px solid transparent;
+  }
+  100% {
+    border: 2px solid black;
+  }
+}
+.alert-info {
+  padding: 15px;
+  height: 30px;
+  width: 150px;
+  border-radius: 17px;
+  text-align: center;
+  align-content: center;
+  background-color: #ffcccc;
+}
+
+.alert-success {
+  padding: 15px;
+  height: 30px;
+  width: 150px;
+  border-radius: 17px;
+  text-align: center;
+  align-content: center;
+  background-color: #ff9999;
+}
+
+.alert-warning {
+  padding: 15px;
+  height: 30px;
+  width: 150px;
+  border-radius: 17px;
+  text-align: center;
+  align-content: center;
+  background-color: #ff6666;
+}
+
+.alert-danger {
+  padding: 15px;
+  height: 30px;
+  width: 150px;
+  border-radius: 17px;
+  text-align: center;
+  align-content: center;
+  background-color: #ff3333;
+  animation: borde-animado 1s infinite;
+}
+
+.card-1 {
+  font-size: 14px;
+  box-shadow: 0 2px 4px grey;
+  padding: 15px;
+  height: 80px;
+  width: 600px;
+  border-radius: 17px;
+  text-align: center;
+  align-content: center;
+}
+
+.card-2 {
+  font-size: 28px;
+  box-shadow: 0 4px 8px grey;
+  padding: 15px;
+  height: 80px;
+  width: 600px;
+  border-radius: 17px;
+  text-align: center;
+  align-content: center;
+}
+
+.card-3 {
+  font-size: 42px;
+  box-shadow: 0 6px 12px grey;
+  padding: 15px;
+  height: 80px;
+  width: 600px;
+  border-radius: 17px;
+  text-align: center;
+  align-content: center;
+}
+
+.card-4 {
+  font-size: 56px;
+  box-shadow: 0 8px 16px grey;
+  padding: 15px;
+  height: 80px;
+  width: 600px;
+  border-radius: 17px;
+  text-align: center;
+  align-content: center;
+}
+
+.tarjeta-1 {
+  background-color: #00b300;
+  color: white;
+  padding: 15px;
+  height: 30px;
+  width: 150px;
+  border-radius: 17px;
+  text-align: center;
+  align-content: center;
+}
+
+.tarjeta-2 {
+  background-color: #00e600;
+  color: white;
+  padding: 15px;
+  height: 30px;
+  width: 150px;
+  border-radius: 17px;
+  text-align: center;
+  align-content: center;
+}
+
+.tarjeta-3 {
+  background-color: #1aff1a;
+  color: black;
+  padding: 15px;
+  height: 30px;
+  width: 150px;
+  border-radius: 17px;
+  text-align: center;
+  align-content: center;
+}
+
+.tarjeta-4 {
+  background-color: #4dff4d;
+  color: black;
+  padding: 15px;
+  height: 30px;
+  width: 150px;
+  border-radius: 17px;
+  text-align: center;
+  align-content: center;
+}/*# sourceMappingURL=estilos.css.map */
